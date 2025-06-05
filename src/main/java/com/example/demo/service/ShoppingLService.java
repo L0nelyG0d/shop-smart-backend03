@@ -37,10 +37,6 @@ public class ShoppingLService {
         shoppingRepository.deleteById(id);
     }
 
-    public ShoppingL getListByTitle(String title) {
-        return shoppingRepository.findByTitle(title)
-                .orElseThrow(() -> new RuntimeException("List not found"));
-    }
 
     public ShoppingL setStatus(UUID id){
         ShoppingL shoppingL =  shoppingRepository.findById(id)
